@@ -1,0 +1,68 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .4s ease-in;
+  transition: .4s ease-in;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+p {
+  color: #767676;
+  font-size: 5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+p:hover span:not(.letter) {
+  display: inline-block;
+  font-size: inherit;
+  width: inherit;
+}
+
+p:hover span:not(.letter).space {
+  width: .5em;
+}
+
+p:hover span:not(.letter).cl {
+  color: black;
+}
+
+p:hover {
+  color: black;
+}
+
+p:hover .letter {
+  color: black;
+}
+
+p:hover::after {
+  background-color: #acacac;
+}
+
+p span:not(.letter) {
+  position: relative;
+  top: 0;
+  width: 0px;
+  font-size: 0px;
+}
+/*# sourceMappingURL=style.css.map */
